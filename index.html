@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ConnectMap</title>
+    <script src="https://cdn.jsdelivr.net/npm/vis-network@latest/dist/vis-network.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header>
+    ConnectMap
+</header>
+<main>
+    <div id="map-container"></div>
+    <div class="controls">
+        <button id="add-person">Add Person</button>
+        <button id="add-context">Add Context</button>
+        <button id="add-connection">Add Connection</button>
+        <button id="delete-item">Delete Selected</button>
+        <button id="customize-colors">Customize Colors</button>
+        <button id="download-map">Download Map</button>
+        <button id="save-map">Save Map</button>
+        <button id="load-map">Load Map</button>
+        <select id="layout-selector">
+            <option value="default">Default Layout</option>
+            <option value="circular">Circular Layout</option>
+            <option value="grid">Grid Layout</option>
+        </select>
+        </select>
+    </div>
+
+</main>
+<script src="main.js"></script>
+</body>
+<div id="help-modal" class="modal">
+    <div class="modal-content">
+        <span id="close-modal" class="close-button">&times;</span>
+        <h2>Welcome to ConnectMap!</h2>
+        <p>
+            Here's how to use the website:
+        </p>
+        <ol>
+            <li><b>Add Person</b>: Click this button to add a person to your map. You’ll be prompted to enter their name.</li>
+            <li><b>Add Context</b>: Use this button to add contexts such as "School", "Work", etc., which represent shared places or events.</li>
+            <li><b>Add Connection</b>: Select two nodes (persons or contexts) on the map and click this button to connect them. You can also choose to add an indirect connection by specifying an intermediary.</li>
+            <li><b>Delete Selected</b>: Select nodes or connections and click this button to remove them.</li>
+            <li><b>Customize Colors</b>: Click this button after selecting nodes, edges, or nothing (for background) to change their colors.</li>
+            <li><b>Save Map</b>: Save the current state of your map as a JSON file for later use.</li>
+            <li><b>Load Map</b>: Load a previously saved JSON file to restore your map.</li>
+            <li><b>Download Map</b>: Save the map as a PNG image to share or keep as a reference.</li>
+        </ol>
+        <p>
+            <b>Tips:</b><br>
+            - Use <b>Ctrl+Click</b> (or Cmd+Click on Mac) to select multiple items on the map.<br>
+            - Zoom in/out or drag the map using your mouse.
+        </p>
+    </div>
+</div>
+
+</html>
